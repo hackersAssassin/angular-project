@@ -1,0 +1,11 @@
+<table>
+    <tbody>
+        <tr *ngFor="let subcategory of a">
+            <td>
+                <h3 >
+                    <a  (click)="subcatDisp(subcategory)">{{subcategory.subcategoryname}}</a></h3>
+            </td>
+            <td> <img src="{{subcategory.subcategoryimage}}" /></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,91 @@
+create database etourfinal;
+use etourfinal;
+create table categorysubcategory(catsubid int auto_increment primary key,
+categoryid int,
+categoryname varchar(250),
+categoryimage varchar(250),
+subcategoryid int,
+subcategoryname varchar(250),
+subcategoryimage varchar(250),
+eofflag varchar(250));
+
+
+ create table packagecompletedetail
+    (packageid int auto_increment primary key,
+     tourname varchar(250),
+     tourimage varchar(250),
+     catsubid int,description varchar(250),
+     foreign key(subcategoryid)
+     references categorysubcategory(subcategoryid);
+
+
+ create table datepackagedetail(
+     datepackageid int auto_increment primary key,
+     startdate date,
+     enddate date,
+     packageid int,
+    foreign key(packageid)
+     references packagecompletedetail(packageid));
+
+
+ create table itinerary(itrid int auto_increment primary key,
+packageid int,
+location varchar(250),
+     daywisedescription text,
+     daynumber int,
+     foreign key(packageid)
+     references packagecompletedetail(packageid)
+     );
+
+create table customerdetail(customerid int auto_increment primary key,
+customername varchar(250),
+email varchar(250),
+password varchar(250),
+address1 varchar(250),
+address2 varchar(250),
+city varchar(250),
+state varchar(250),
+pin int,
+telno varchar(10),
+mobileno varchar(10),
+registrationdate date);
+
+ create table passengerdetail(passengerid int auto_increment primary key,
+     bookingid int,
+     passengername varchar(250),
+     passengerdob date,
+     roomtype varchar(250),
+	 cost decimal(8,2),
+     passengeriddocument varchar(250),
+     passengeridno varchar(250) unique,
+     passengersex varchar(250),
+     passengeremail varchar(250)),
+	 foreign key (bookingid)
+     references bookingdetail(bookingid));
+
+create table bookingdetail(bookingid int auto_increment  primary key,
+     datepackageid int,
+     bookingdate date,
+     customerid int,
+     packageid int,
+     activestatus varchar(250),
+     foreign key(packageid)
+     references packagecompletedetail(packageid),
+     foreign key(customerid)
+     references customerdetail(customerid),
+     foreign key(datepackageid)
+     references datepackagedetail(datepackageid));
+
+ create table pricedetail(priceid int auto_increment primary key,
+     packageid int,
+     tourcost decimal(8,2),
+     singleperson decimal(8,2),
+     adultprice decimal(8,2),
+     childrenwobed decimal(8,2),
+     childrenwithbed decimal(8,2),
+     foreign key (packageid)
+     references packagecompletedetail(packageid));
+
+	 
+	 
+	 

@@ -1,0 +1,59 @@
+<table>
+  <tbody>      
+    <tr>
+      <th bgcolor="#EFEFEF">DayNo</th>
+      <th bgcolor="#EFEFEF">Location</th>
+      <th bgcolor="#EFEFEF">Daywise Description</th>
+    </tr>
+      
+    <tr *ngFor="let cdetail of itr">
+      <td>{{cdetail.daynumber}}</td>
+     <td>{{cdetail.location}}</td>
+     <td>{{cdetail.daywisedescription}}</td>
+      </tbody>
+
+      <button (click)="getpackageid(itr.packageid)">Select Date</button> 
+</table>
+<!--
+<table>
+  <tbody *ngIf='ddetail'>      
+    <tr>
+
+      <th bgcolor="#EFEFEF">Itr Id </th>
+      <th bgcolor="#EFEFEF">PackageId</th>
+      <th bgcolor="#EFEFEF">Location</th>
+      <th bgcolor="#EFEFEF">DayNo</th>
+      <th bgcolor="#EFEFEF">Daywise Description</th>
+    </tr>
+      
+    <tr *ngFor="let cdetail of datedetail">
+      <td>{{cdetail.startdate}}</td>
+      <td>{{cdetail.packagecompletedetail.packageid}}</td>
+     
+     <td>{{cdetail.enddate}}</td>
+     <td>{{cdetail.reversetripflag}}</td>
+    <tr>
+
+</table>
+<table>
+  <tbody *ngIf='pdetail'>      
+    <tr>
+
+      <th bgcolor="#EFEFEF">Itr Id </th>
+      <th bgcolor="#EFEFEF">PackageId</th>
+      <th bgcolor="#EFEFEF">Location</th>
+      <th bgcolor="#EFEFEF">DayNo</th>
+      <th bgcolor="#EFEFEF">Daywise Description</th>
+    </tr>
+      
+    <tr *ngFor="let cdetail of pricedetail">
+      <td>{{cdetail.tourcost}}</td>
+      <td>{{cdetail.packagecompletedetail.packageid}}</td>
+     
+     <td>{{cdetail.singleperson}}</td>
+     <td>{{cdetail.adults}}</td>
+     <td>{{cdetail.chhildwobed}}</td>
+     <td>{{cdetail.chhildwithbed}}</td>
+    <tr>
+</table>
+-->

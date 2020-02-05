@@ -1,0 +1,8 @@
+<table>
+  <tbody>       
+          <tr *ngFor="let categorysubcategory of a">
+              <td><h3><a (click)="subcatDisp(categorysubcategory)">{{categorysubcategory.categoryname | uppercase}}</a></h3></td>
+              <td><img src="{{categorysubcategory.categoryimage}}"/></td>
+          </tr>
+              </tbody>
+              </table>

@@ -1,0 +1,33 @@
+<table style="width:80%">    
+   <th>Start Date</th>
+   <th>End Date</th>
+<tr *ngFor="let cdetail of datepackagedetail">
+  <td ng-click="show()" (click)="getlist(cdetail.packagecompletedetail.packageid)">{{cdetail.startdate}}</td>
+  <td>{{cdetail.enddate}}</td>
+  <td><input type="radio" name="rvalue" (click)="getdatevalue(item.datepackageid)"></td>
+</table>
+
+<a href="Bookingdetail">Book a Tour</a>
+<!--
+<div  ng-show ="show1">
+<table >
+  
+    <tr>
+
+      <th bgcolor="#EFEFEF">Itr Id </th>
+      <th bgcolor="#EFEFEF">PackageId</th>
+      <th bgcolor="#EFEFEF">Location</th>
+      <th bgcolor="#EFEFEF">DayNo</th>
+      <th bgcolor="#EFEFEF">Daywise Description</th>
+    </tr>
+    <tr *ngFor="let itinerary of itinerary">
+      <td>{{itinerary.itrid}}</td>
+      <td>{{itinerary.packageid}}</td>
+     
+     <td>{{itinerary.location}}</td>
+     <td>{{itinerary.daynumber}}</td>
+     <td>{{itinerary.daywisedescription}}</td>
+     <tr>
+</table>
+</div>
+-->

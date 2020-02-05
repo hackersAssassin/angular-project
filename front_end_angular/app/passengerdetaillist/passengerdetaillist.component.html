@@ -1,0 +1,38 @@
+<p>
+  employee-list works!
+</p><hr/>
+<table>
+  <thead>
+      <tr>
+          <th>ID</th>
+          <th>Booking ID</th>
+          <th>Name</th>
+          <th>Room Type</th>
+          <th>Cost</th>
+          <th>Document id</th>
+          <th>Document No</th>
+          <th>Gender</th>
+          <th>Email</th>
+          <th>DOB</th>
+      </tr>
+  </thead>
+  <tbody>       
+          <tr *ngFor="let passengerdetail of passengers">
+            <td>{{passengerdetail.passengerid}}</td>      
+              <td>{{passengerdetail.bookingid}}</td>
+              <td>{{passengerdetail.passengername}}</td>
+              <td>{{passengerdetail.roomtype}}</td>
+              <td>{{passengerdetail.cost }}</td>
+              <td>{{passengerdetail.passengeriddocument }}</td>
+              <td>{{passengerdetail.passengeridno }}</td>
+              <td>{{passengerdetail.passengersex }}</td>
+              <td>{{passengerdetail.passengeremail }}</td>
+              <td>{{passengerdetail.passengerdob }}</td>
+          </tr>
+         <!--<tr ngIf="!customers || customers.length==0">
+            <td colspan="9">
+              No customers to display
+              </td>
+              </tr>-->
+              </tbody>
+              </table>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.card {
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 50%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 8px;
+}
+</style>
+</head>
+<body>
+
+<h2>Packages</h2>
+<table>
+        
+          <tr>
+            <td *ngFor="let packagecompletedetail of packages" ><div class="card">
+  <img src="{{packagecompletedetail.tourimage}}">
+  <div class="container">
+    <h4><b><a (click)="getpackageid(packagecompletedetail.packageid)">{{packagecompletedetail.tourname}}</a></b></h4>     
+  </div>
+</div></td>      
+          </tr>
+              </table>
+   
+</body>
+
+<!--
+<p>
+  packagecompletedetail works!
+</p>
+<table>
+  <thead>
+      <tr>
+          <th>Package ID</th>
+          <th>Tour</th>
+          <th>TourImage</th>
+          <th>Catsubid    </th>
+          <th>Description </th>
+          
+      </tr>
+  </thead>
+  <tbody>       
+          <tr *ngFor="let packagecompletedetail of packages">
+            <td><div class="card">
+  <img src="../assets/Images/i1.jpg" style="width:100%">
+  <div class="container">
+    <h4><b>{{packagecompletedetail.tourname}}</b></h4> 
+    <a href="packagecompletedetail" class="btn btn-primary">SELECT</a>    
+  </div>
+</div></td>      
+              <td>{{packagecompletedetail.tourname}}</td>
+              <td>{{packagecompletedetail.tourimage}}</td>
+              <td>{{packagecompletedetail.catsubid}}</td>
+              <td>{{packagecompletedetail.description }}</td>
+              
+          </tr>
+       
+              </tbody>
+              </table>
+            -->
